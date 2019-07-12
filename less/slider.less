@@ -1,0 +1,88 @@
+.slider {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 58px;
+  width: 100vw;
+  min-height: 635px;
+  background: rgba(0, 255, 0, 0.1);
+  //transition: 1.5s;
+}
+
+.slider__container {
+  width: 952px;
+  overflow: visible;
+}
+
+.slider__container .slick-list {
+  overflow: visible !important;
+}
+
+//.slider__track {
+//  display: flex;
+//  align-items: flex-start;
+//  background: rgba(0, 255, 0, 0.1);
+//  transition: 1.5s;
+//  transition-timing-function: ease-out;
+//}
+
+.slider__item {
+  margin: 0 33px;
+  width: 410px;
+  min-height: 635px;
+  background: rgba(0, 0, 255, 0.1);
+
+  &--sale {
+    position: relative;
+  }
+}
+
+.slider__discount-sticker {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 65px;
+  height: 46px;
+  font-family: "Poppins", "Arial", Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: #ffffff;
+  background: #0a0a0a;
+}
+
+.slider__img-container {
+  width: 410px;
+  height: 585px;
+  background: rgba(0, 0, 255, 0.1);
+}
+
+.slider__text-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 24px;
+}
+
+.slider__title {
+  font-family: "Poppins", "Arial", Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: #222334;
+}
+
+.slider__price {
+  font-family: "Poppins", "Arial", Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: #222334;
+}
+
+.slider__old-price {
+  margin-right: 15px;
+  font-weight: 300;
+  font-size: 18px;
+  text-decoration: line-through;
+  opacity: 0.6;
+}

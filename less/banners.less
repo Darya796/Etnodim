@@ -1,0 +1,113 @@
+.banners {
+}
+
+.banners__wrapper {
+  margin: 100px auto 0;
+  //padding: 40px 0 0;
+  width: 90%;
+  max-width: 1470px;
+  min-width: 1170px;
+  //background: rgba(255, 255, 0, 0.1);
+
+  min-height: 690px;
+}
+
+.banners__slider {
+  //position: relative;
+}
+
+.banners__slide {
+  overflow: hidden;
+}
+
+.banners__slide-inner {
+  //display: inline-block;
+  //position: absolute;
+  //width: 100%;
+  //height: 740px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 740px;
+  background: rgba(255, 0, 255, 0.1);
+  //background: red;
+  //z-index: 1;
+}
+
+.banners__text-col {
+  //flex-shrink: 0;
+  //width: 48%;
+  //max-width: 506px;
+  min-height: 100px;
+  //background: rgba(255, 0, 255, 0.1);
+  z-index: 1;
+
+  &--sale {
+    padding-left: 20px;
+  }
+}
+
+.banners__sale-count {
+  font-family: "Poppins", "Arial", Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 56px;
+  color: #222334;
+  text-shadow: 0 0 10px #ffffff;
+}
+
+.banners__sale-title {
+  font-family: "Poppins", "Arial", Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 130px;
+  line-height: 100px;
+  color: #222334;
+  text-shadow: 0 0 10px #ffffff;
+}
+
+.banners__sale-description {
+  font-family: "Poppins", "Arial", Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 56px;
+  color: #222334;
+  text-shadow: -3px 3px 10px #ffffff;
+}
+
+.banners__img-col {
+  flex-shrink: 0;
+  width: 65%;
+  max-width: 890px;
+  //width: 48%;
+  height: 750px;
+
+  //background: rgba(255, 0, 255, 0.1);
+}
+
+.banner__img-parallax-container {
+  position: relative;
+  width: 890px;
+  height: 750px;
+}
+
+.banner__img-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+  //overflow-x: visible;
+  z-index: 1;
+
+  //background: rgba(255, 0, 255, 0.5);
+
+  //display: none;
+
+  & .sale__img-fr {
+    position: absolute;
+    top: 8%;
+    left: 5%;
+    width: 83%;
+
+    //display: none;
+  }
+}
