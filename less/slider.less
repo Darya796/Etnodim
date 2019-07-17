@@ -1,11 +1,13 @@
 .slider {
   display: flex;
   align-items: flex-start;
-  margin-top: 58px;
+  margin-top: 61px;
   width: 100vw;
-  min-height: 635px;
-  background: rgba(0, 255, 0, 0.1);
-  //transition: 1.5s;
+}
+
+.slider__arrows-container {
+  display: flex;
+  flex-direction: column-reverse;
 }
 
 .slider__container {
@@ -17,23 +19,32 @@
   overflow: visible !important;
 }
 
-//.slider__track {
-//  display: flex;
-//  align-items: flex-start;
-//  background: rgba(0, 255, 0, 0.1);
-//  transition: 1.5s;
-//  transition-timing-function: ease-out;
-//}
-
 .slider__item {
+  //position: relative;
   margin: 0 33px;
   width: 410px;
   min-height: 635px;
-  background: rgba(0, 0, 255, 0.1);
 
   &--sale {
     position: relative;
   }
+
+  &:hover .slider__title::before {
+    transform: scaleX(1);
+  }
+
+  &:hover .slider__img-container img {
+    transform: scale(1.1);
+  }
+}
+
+.slider__link {
+  //position: absolute;
+  //top: 0;
+  //left: 0;
+  //right: 0;
+  //bottom: 0;
+  //z-index: 1;
 }
 
 .slider__discount-sticker {
@@ -50,26 +61,48 @@
   font-size: 16px;
   color: #ffffff;
   background: #0a0a0a;
+  z-index: 1;
 }
 
 .slider__img-container {
   width: 410px;
   height: 585px;
-  background: rgba(0, 0, 255, 0.1);
+  //z-index: -1;
+  overflow: hidden;
+
+  & img {
+    transition: 0.5s;
+    transform-origin: 50% 50%;
+  }
 }
 
 .slider__text-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 24px;
+  padding-top: 20px;
 }
 
 .slider__title {
+  position: relative;
+  padding-bottom: 3px;
   font-family: "Poppins", "Arial", Helvetica, sans-serif;
   font-weight: 500;
   font-size: 18px;
   color: #222334;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #24232b;
+    transform: scaleX(0);
+    transform-origin: 50% 50%;
+    transition: 0.3s;
+  }
 }
 
 .slider__price {
@@ -85,4 +118,10 @@
   font-size: 18px;
   text-decoration: line-through;
   opacity: 0.6;
+}
+
+@media (min-width: 1440px) {
+  .slider__container {
+    width: 1428px;
+  }
 }

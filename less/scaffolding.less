@@ -55,6 +55,16 @@ img {
   //max-height: 100%;
 }
 
+input::-webkit-input-placeholder {color:#504f55;}
+input::-moz-placeholder          {color:#504f55;}
+input:-moz-placeholder           {color:#504f55;}
+input:-ms-input-placeholder      {color:#504f55;}
+
+textarea::-webkit-input-placeholder {color:#504f55;}
+textarea::-moz-placeholder          {color:#504f55;}
+textarea:-moz-placeholder           {color:#504f55;}
+textarea:-ms-input-placeholder      {color:#504f55;}
+
 .unscrolled {
   overflow-y: hidden;
 }
@@ -63,27 +73,72 @@ img {
   display: none;
 }
 
-//.temp-bg {
-//  position: absolute;
-//  top: 0;
-//  left: 0;
-//  width: 100%;
-//  height: 6260px;
-//  background: url("../img/mapa копия 3.jpg") no-repeat top left;
-//  background-size: 100%;
-//  opacity: 0.3;
-//  z-index: -1;
-//}
+.temp-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6260px;
+  //background: url("../img/design/mapa копия 4.jpg") no-repeat top left;
+  //background-size: 100%;
+  opacity: 0.3;
+  z-index: -1;
 
-.temp-icons {
-  //margin-left: auto;
-  width: 105px;
-  height: 25px;
-  background: rgba(255, 0, 0, 0.3);
+  &--blog {
+    background: url("../img/design/mapa блог.jpg") no-repeat top left;
+    background-size: 100%;
+  }
 }
+
+.mobile-text {
+  display: none;
+  visibility: hidden;
+}
+
 
 @media (max-width: 1199px) {
   body > * {
     display: none;
   }
+
+  .mobile-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    height: 100vh;
+    width: 100vw;
+    font-family: "Poppins", "Arial", Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: #222334;
+    text-align: center;
+    visibility: visible;
+  }
+}
+
+.slick-arrow {
+  display: block;
+  width: 25px;
+  height: 25px;
+  font-size: 0;
+  background: url("../img/right-arrow.svg") no-repeat center;
+  transition: 0.3s;
+
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+.slick-prev {
+  transform: rotate(180deg);
+}
+
+.slick-next {
+  margin-bottom: 20px;
+}
+
+.slick-disabled {
+  opacity: 0.4;
+  pointer-events: none;
 }

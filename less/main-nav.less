@@ -27,6 +27,11 @@
     opacity: 1;
   }
 
+  &:hover .main-nav__burger-title::before {
+    transform: scaleX(1);
+    transition: 0.3s;
+  }
+
   &--opened::before {
     opacity: 0;
   }
@@ -45,8 +50,9 @@
 
 .main-nav__burger-title {
   position: absolute;
-  top: 193px;
-  left: 50%;
+  top: 200px;
+  left: -10px;
+  //padding-right: 115px;
   font-family: "Poppins", "Arial", Helvetica, sans-serif;
   font-weight: 400;
   font-size: 14px;
@@ -54,7 +60,7 @@
   color: #2b2b2b;
   opacity: 0.4;
   transition: 0.3s;
-  transform: rotate(-90deg) translateY(-100%);
+  transform: rotate(-90deg);
 
   &::before {
    content: "";
@@ -64,6 +70,9 @@
    width: 80px;
    height: 1px;
    background: #2b2b2b;
+    transition: 0.3s;
+    transform: scaleX(0);
+    transform-origin: 100% 0;
   }
 }
 

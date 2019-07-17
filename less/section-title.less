@@ -2,11 +2,25 @@
   font-family: "Poppins", "Arial", Helvetica, sans-serif;
   font-weight: 400;
   font-size: 56px;
-  line-height: 72px;
+  line-height: 68px;
   color: #222334;
 
   &--bottom-paragraph {
-margin-bottom: 27px;
+    margin-bottom: 27px;
+  }
+
+  &--border-bottom {
+    position: relative;
+  }
+
+  &--border-bottom::before {
+    content: "";
+    position: absolute;
+    bottom: 18px;
+    right: 0;
+    width: ~"calc(100% - 277px)";
+    height: 1px;
+    background: #d1d1d1;
   }
 }
 

@@ -89,3 +89,59 @@
     width: 100%;
   }
 }
+
+.btn__line-crossed-text {
+  position: relative;
+  margin-top: 45px;
+  padding-left: 100px;
+  //margin-left: 100px;
+  font-weight: 500;
+  transition: 0.3s;
+  //background: #ffffff;
+
+  &::before {
+   content: "";
+   position: absolute;
+   top: 51%;
+   left: 0;
+   //left: -100px;
+   width: 65px;
+   height: 2px;
+   background: #2b2b2b;
+    transition: 0.3s;
+  }
+
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 57%;
+    left: 0;
+    //left: -100px;
+    width: 10px;
+    height: 14px;
+    background: url("../img/right-arrow.svg") no-repeat 110% center;
+    background-size: 18px;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: 0.3s;
+  }
+
+  &:hover {
+    padding-left: 0;
+    padding-right: 100px;
+    //margin-left: 0;
+    //margin-right: 100px;
+  }
+
+  &:hover::before {
+    transform: translateX(275px);
+    //transform: translateX(375px);
+  }
+
+  &:hover::after {
+    transform: translateX(334px) translateY(-50%);
+    //transform: translateX(434px) translateY(-50%);
+    opacity: 1;
+  }
+}
