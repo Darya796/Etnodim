@@ -46,6 +46,10 @@
     width: 30px;
     transform: rotate(-45deg) translateY(3px);
   }
+
+  &--inner-page .main-nav__burger-title {
+    display: none;
+  }
 }
 
 .main-nav__burger-title {
@@ -63,13 +67,13 @@
   transform: rotate(-90deg);
 
   &::before {
-   content: "";
-   position: absolute;
-   top: 50%;
-   left: 73px;
-   width: 80px;
-   height: 1px;
-   background: #2b2b2b;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 73px;
+    width: 80px;
+    height: 1px;
+    background: #2b2b2b;
     transition: 0.3s;
     transform: scaleX(0);
     transform-origin: 100% 0;
@@ -133,5 +137,11 @@
 
   &:hover::before {
     transform: scaleX(1);
+  }
+}
+
+@media (min-width: 1440px) {
+  .main-nav__burger--inner-page .main-nav__burger-title {
+    display: inline-block;
   }
 }

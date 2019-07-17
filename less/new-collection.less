@@ -1,7 +1,7 @@
 .new-collection {
   overflow: hidden;
 
-  &--page-bottom {
+  &--blog-stories {
     margin-top: 110px;
   }
 }
@@ -14,4 +14,15 @@
   padding: 44px 0 0;
   width: 87%;
   max-width: 1462px;
+
+  &--blog {
+    position: relative;
+  }
+
+  &--blog .slider__arrows-container {
+    position: absolute;
+    bottom: -120px;
+    right: 0;
+    z-index: 1;
+  }
 }
