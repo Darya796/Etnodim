@@ -6,14 +6,15 @@
   //margin: 0 auto;
   //background: rgba(0, 0, 255, 0.1);
   //text-align: center;
+  transition: 0.5s;
+
+  &--hidden {
+    opacity: 0;
+  }
 }
 
-a.logo__container {
-  transition: 0.3s;
-
-  &:hover {
-    opacity: 0.5;
-  }
+a.logo__container:hover {
+  opacity: 0.5;
 }
 
 .logo {

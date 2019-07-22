@@ -140,8 +140,21 @@
   }
 
   &:hover::after {
-    transform: translateX(334px) translateY(-50%);
+    transform: translateX(334px) translateY(-54%);
     //transform: translateX(434px) translateY(-50%);
     opacity: 1;
+  }
+}
+
+.btn__share {
+  width: 22px;
+  height: 23px;
+  font-size: 0;
+  background: url("../img/share.svg") no-repeat center;
+  background-size: 21px;
+  transition: 0.3s;
+
+  &:hover {
+    opacity: 0.6;
   }
 }

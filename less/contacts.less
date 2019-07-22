@@ -26,6 +26,10 @@
 .contacts__img-block {
   flex-shrink: 0;
   margin-right: 40px;
+
+  &:hover .contacts__img-container img {
+    transform: scale(1.1);
+  }
 }
 
 .contacts__img-container {
@@ -36,6 +40,11 @@
   width: 280px;
   height: 280px;
   overflow: hidden;
+
+  & img {
+    transition: 0.5s;
+    transform-origin: 50% 50%;
+  }
 }
 
 .contacts__city {
