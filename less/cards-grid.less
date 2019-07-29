@@ -1,0 +1,144 @@
+.cards-grid {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin: 70px -45px 0;
+
+  & .pagination {
+    margin: 0 45px;
+  }
+
+  & .pagination__divider {
+    left: 28%;
+    width: 51%;
+  }
+}
+
+.cards-grid__item {
+  margin: 0 45px 45px;
+  width: 275px;
+  min-height: 580px;
+
+  &--sale {
+    position: relative;
+  }
+
+  &:hover .cards-grid__img-container img {
+    transform: scale(1.1);
+  }
+
+  &:hover .cards-grid__buy-btn {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.cards-grid__discount-sticker {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 65px;
+  height: 46px;
+  font-family: "Poppins", "Arial", Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: #ffffff;
+  background: #0a0a0a;
+  z-index: 1;
+}
+
+.cards-grid__img-container {
+  margin-bottom: 20px;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+
+  & img {
+    width: 100%;
+    transition: 0.5s;
+    transform-origin: 50% 50%;
+  }
+}
+
+.cards-grid__title {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 3px;
+  max-width: 275px;
+  font-family: "Poppins", "Arial", Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: #222334;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #24232b;
+    transform: scaleX(0);
+    transform-origin: 50% 50%;
+    transition: 0.3s;
+  }
+
+  &:hover::before {
+    transform: scaleX(1);
+  }
+}
+
+.cards-grid__price {
+  display: block;
+  font-family: "Poppins", "Arial", Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: #222334;
+}
+
+.cards-grid__old-price {
+  margin-left: 15px;
+  font-weight: 300;
+  font-size: 18px;
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.cards-grid__buy-btn {
+  margin-top: 37px;
+  padding: 11px 0;
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+}
+
+//@media (min-width: 1440px) {
+//  .slider__container {
+//    width: 1428px;
+//  }
+//
+//  .slider--blog .slider__container {
+//    width: 1218px;
+//  }
+//}
+//
+//@media (min-width: 1855px) {
+//  .slider--blog .slider__container {
+//    width: 1624px;
+//  }
+//}
+
+
+@media (min-width: 1660px) {
+  .cards-grid .pagination__divider {
+    left: 22%;
+    width: 61%;
+  }
+}

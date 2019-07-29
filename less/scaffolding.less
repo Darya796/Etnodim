@@ -93,6 +93,16 @@ textarea:-ms-input-placeholder      {color:#504f55;}
     //background: url("../img/design/mapa пост.jpg") no-repeat top left;
     //background-size: 100%;
   }
+
+  &--catalog {
+    //background: url("../img/design/mapa КАТАЛОГ.jpg") no-repeat top left;
+    //background-size: 100%;
+  }
+
+  &--product {
+    //background: url("../img/design/mapa КАТАЛОГ.jpg") no-repeat top left;
+    //background-size: 100%;
+  }
 }
 
 .mobile-text {
@@ -147,3 +157,71 @@ textarea:-ms-input-placeholder      {color:#504f55;}
   opacity: 0.4;
   pointer-events: none;
 }
+
+.ui-widget.ui-widget-content {
+  border: none;
+}
+
+.ui-corner-all, .ui-corner-bottom, .ui-corner-right, .ui-corner-br {
+  border-radius: 0;
+}
+
+.ui-slider-horizontal {
+  position: relative;
+  margin-right: 7px;
+  padding: 10px 0;
+  cursor: pointer;
+  background: transparent !important;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: ~"calc(100% + 7px)";
+    height: 1px;
+    background: #a7a7ae;
+  }
+}
+
+.ui-widget-header {
+  position: relative;
+  margin-right: 7px;
+  padding: 10px 0;
+  cursor: pointer;
+  background: transparent !important;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: ~"calc(100% + 7px)";
+    height: 1px;
+    background: #222334;
+  }
+}
+
+.ui-slider-handle.ui-corner-all.ui-state-default {
+  //margin-right: 10px;
+  //padding-right: 10px;
+  background: #222334;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background: #222334;
+  }
+}
+
+.ui-slider-horizontal .ui-slider-handle {
+  top: 50%;
+  margin: 0;
+  width: 7px;
+  height: 7px;
+  transform: translateY(-45%);
+}
+
+//.ui-slider-handle.ui-corner-all.ui-state-default:nth-of-type(2) {
+//  transform: translateY(-45%) translateX(-7px);
+//}

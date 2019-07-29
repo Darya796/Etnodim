@@ -1,0 +1,59 @@
+.quantity-input__container {
+  display: flex;
+  align-items: center;
+  //width: 126px;
+  background: rgba(255, 0, 0, 0.2);
+}
+
+.quantity-input__btn {
+  position: relative;
+  width: 17px;
+  height: 17px;
+  font-size: 0;
+  transition: 0.3s;
+
+  &--minus::before {
+   content: "";
+   position: absolute;
+   top: 8px;
+   left: 0;
+   width: 15px;
+   height: 1px;
+   background: #222334;
+  }
+  &--plus::before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 0;
+    width: 15px;
+    height: 1px;
+    background: #222334;
+  }
+
+  &--plus::after {
+   content: "";
+   position: absolute;
+   top: 1px;
+   left: 7px;
+   width: 1px;
+   height: 15px;
+   background: #222334;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+.quantity-input__input {
+  margin: 0 25px;
+  padding: 10px;
+  width: 50px;
+  font-family: "Poppins", "Arial", Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #222334;
+  text-align: center;
+  border: 1px solid #222334;
+}
