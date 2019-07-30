@@ -18,8 +18,25 @@ $(function () {
             $(".main-nav__burger-title").html("Menu");
         }
     });
-
     /*-------------------------------------------------------------------------------------------------------------------*/
+
+    $(".cart__btn").on("click", function () {
+        $(".cart__header-popup-overlay").toggleClass("cart__header-popup-overlay--visible");
+        $("body").toggleClass("unscrolled");
+    });
+
+    $(".cart__popup-close").on("click", function () {
+        $(".cart__header-popup-overlay").removeClass("cart__header-popup-overlay--visible");
+        $("body").removeClass("unscrolled");
+    });
+
+    $(".cart__header-popup-overlay").on("click", function (e) {
+        if ($(".cart__header-popup-overlay").is(e.target) && $(".cart__header-popup-overlay").has(e.target).length === 0) {
+            $(".cart__header-popup-overlay").removeClass("cart__header-popup-overlay--visible");
+            $("body").removeClass("unscrolled");
+        }
+    });
+    /*==================================================================================================================*/
 
     $('.slider__container').not($(".slider__container--blog")).slick({
         // arrows: false,
