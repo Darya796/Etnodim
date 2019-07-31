@@ -266,7 +266,7 @@
 }
 
 .cart__popup-product-price {
-  display: inline-block;
+  //display: inline-block;
   width: 100%;
   max-width: 130px;
   font-family: "Poppins", "Arial", Helvetica, sans-serif;
@@ -344,6 +344,17 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+
+  &--card {
+    margin: 55px 0 70px;
+    max-width: none;
+    font-size: 38px;
+    white-space: normal;
+  }
+
+  &--card .cart__popup-total-price {
+    font-size: 48px;
+  }
 }
 
 .cart__popup-total-price {

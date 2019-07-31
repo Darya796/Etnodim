@@ -18,6 +18,7 @@ $(function () {
             $(".main-nav__burger-title").html("Menu");
         }
     });
+
     /*-------------------------------------------------------------------------------------------------------------------*/
 
     $(".cart__btn").on("click", function () {
@@ -36,9 +37,33 @@ $(function () {
             $("body").removeClass("unscrolled");
         }
     });
+
+    /*-------------------------------------------------------------------------------------------------------------------*/
+
+    // $(".quantity-input__container").on("click", function (e) {
+    //     var counter = parseInt($(this).find(".quantity-input__input").val());
+    //     if ($(this).find(".quantity-input__btn--plus").is(e.target)) {
+    //         counter++;
+    //         $(this).find(".quantity-input__input").val(counter);
+    //         $(this).find(".quantity-input__btn--minus").prop('disabled', false);
+    //     }
+    //
+    //     if ($(this).find(".quantity-input__btn--minus").is(e.target)) {
+    //         if (counter > 2) {
+    //             counter--;
+    //             $(this).find(".quantity-input__input").val(counter);
+    //         }
+    //         else {
+    //             $(this).find(".quantity-input__btn--minus").prop('disabled', true);
+    //             counter = 1;
+    //             $(this).find(".quantity-input__input").val(counter);
+    //         }
+    //     }
+    // });
+
     /*==================================================================================================================*/
 
-    $('.slider__container').not($(".slider__container--blog")).slick({
+    $('.slider__container').not($(".js--slider__container--blog")).slick({
         // arrows: false,
         slidesToShow: 3,
         slidesToScroll: 3,
@@ -68,7 +93,7 @@ $(function () {
         appendArrows: ".banners__slider-arrows"
     });
 
-    $('.slider__container--blog').slick({
+    $('.js--slider__container--blog').slick({
         // arrows: false,
         slidesToShow: 4,
         slidesToScroll: 4,
@@ -95,6 +120,7 @@ $(function () {
         ]
 
     });
+
     /*-------------------------------------------------------------------------------------------------------------------*/
 
     $(document).on("click", function (e) {
@@ -123,6 +149,20 @@ $(function () {
 
         $(".jewelry__inner-img-fr").parallax(37, e);
         $(".jewelry__outer-img-fr").parallax(37, e);
+    });
+    /*==================================================================================================================*/
+
+    jQuery.each($(".product__color"), function () {
+        $(this).css("background", $(this).data("bg"));
+    });
+
+    $(".product__color-btn").eq(2).addClass("product__color-btn--checked");
+    $(".product__chosen-color").text($(".product__color-btn").eq(2).data("color"));
+
+    $(".product__color-btn").on("click", function () {
+        $(this).addClass("product__color-btn--checked");
+        $(".product__color-btn").not($(this)).removeClass("product__color-btn--checked");
+        $(".product__chosen-color").text($(this).data("color"));
     });
 });
 
