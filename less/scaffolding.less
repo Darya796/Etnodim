@@ -225,3 +225,40 @@ textarea:-ms-input-placeholder      {color:#504f55;}
 //.ui-slider-handle.ui-corner-all.ui-state-default:nth-of-type(2) {
 //  transform: translateY(-45%) translateX(-7px);
 //}
+
+.lg-backdrop {
+  background: fade(#383838, 30%);
+  //background: fade(#242424, 90%);
+}
+
+.lg-toolbar.lg-group {
+  display: none !important;
+}
+
+.lg-prev,
+.lg-next {
+  position: relative;
+  width: 40px !important;
+  height: 40px !important;
+  background: transparent !important;
+}
+
+.lg-prev::before,
+.lg-next::before {
+ content: "";
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ width: 20px;
+ height: 20px;
+ background: url("../img/right-arrow.svg") no-repeat center;
+  background-size: 18px;
+  transform: translate(-50%, -50%);
+}
+
+
+.lg-prev {
+  transform: rotate(180deg);
+}
+.lg-next {
+}
