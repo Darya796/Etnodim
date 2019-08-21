@@ -266,6 +266,10 @@ textarea:-ms-input-placeholder {
   opacity: 0.3;
   z-index: -1;
 }
+.temp-bg--cart {
+  background: url("../img/design/mapa заказ.jpg") no-repeat top left;
+  background-size: 100%;
+}
 .mobile-text {
   display: none;
   visibility: hidden;
@@ -404,6 +408,11 @@ textarea:-ms-input-placeholder {
 .lg-prev {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
+}
+/*--------------------------------------------- TEMPORARY ---------------------------------------------*/
+.red-temporary-text {
+  font-weight: 700;
+  color: #cb003e !important;
 }
 @font-face {
   font-display: swap;
@@ -994,12 +1003,12 @@ a.logo__container:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
   margin-bottom: 25px;
 }
 .cart__popup-title-container .section-title {
@@ -1227,6 +1236,34 @@ a.logo__container:hover {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+}
+.input-container--half {
+  width: 48%;
+}
+.input-container--cvv {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  margin-left: auto;
+  width: 90px;
+}
+.input-container__label {
+  display: block;
+  margin-bottom: 20px;
+  font-family: "Poppins", "Arial", Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: #222334;
+}
+.input-container__input {
+  padding: 12px 14px;
+  width: 100%;
+  font-family: "Poppins", "Arial", Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 14px;
+  color: #222334;
+  border: 1px solid #000000;
 }
 .main-nav__header {
   width: 42%;
@@ -2784,6 +2821,9 @@ a.logo__container:hover {
   opacity: 1;
   visibility: visible;
 }
+.cards-grid__item--catalog {
+  min-height: 420px;
+}
 .cards-grid__discount-sticker {
   position: absolute;
   top: 0;
@@ -3105,4 +3145,155 @@ a.logo__container:hover {
   color: #222334;
   text-align: center;
   border: 1px solid #222334;
+}
+.cart-page__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 50px;
+}
+.cart-page__list-container {
+  width: 47%;
+}
+.payment-form__container {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 543px;
+  min-height: 720px;
+}
+.payment-form__order-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 30px;
+}
+.payment-form__item {
+  margin-right: 60px;
+  font-family: "Poppins", "Arial", Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #2b2b2b;
+  opacity: 0.6;
+}
+.payment-form__buttons-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 30px;
+  width: 100%;
+}
+.payment-form__radio-button {
+  position: relative;
+  width: 200px;
+  height: 95px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.payment-form__radio-button:not(:last-of-type) {
+  margin-right: 75px;
+}
+.payment-form__radio-button:hover {
+  background: #fafafa;
+}
+.payment-form__checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #e8e8e8;
+}
+.payment-form__checkmark--visa {
+  background: url("../img/visaMaster--disabled.svg") no-repeat center;
+  background-size: 120px;
+}
+.payment-form__checkmark--paypal {
+  background: url("../img/paypal--disabled.svg") no-repeat center;
+  background-size: 120px;
+}
+input[name="payment_type"]:checked ~ .payment-form__checkmark.payment-form__checkmark--visa {
+  background: #ffffff url("../img/visaMaster.svg") no-repeat center;
+  background-size: 120px;
+  border-color: #000000;
+}
+input[name="payment_type"]:checked ~ .payment-form__checkmark.payment-form__checkmark--paypal {
+  background: #ffffff url("../img/paypal.svg") no-repeat center;
+  background-size: 120px;
+  border-color: #000000;
+}
+.card__container {
+  position: relative;
+  width: 543px;
+  -webkit-perspective: 800px;
+          perspective: 800px;
+}
+.card__container--disabled {
+  opacity: 0.1;
+  pointer-events: none;
+}
+.card__container:hover .card__front-side {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+.card__container:hover .card__back-side {
+  -webkit-transform: rotateY(360deg);
+          transform: rotateY(360deg);
+}
+.card__front-side,
+.card__back-side {
+  position: absolute;
+  padding: 20px 40px;
+  width: 100%;
+  height: 280px;
+  background: #ffffff;
+  border: 1px solid #000000;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transform-origin: 50% 100%;
+          transform-origin: 50% 100%;
+}
+.card__back-side {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+.card__split-inputs {
+  margin-top: 25px;
+  width: 170px;
+}
+.card__date-divider {
+  margin: 0 15px;
+  font-family: "Poppins", "Arial", Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 150px;
+  color: #222334;
+}
+.card__magnet-line {
+  margin: 27px 0 45px;
+  width: 100%;
+  height: 52px;
+  background: #242424;
+}
+.card__cvv-line {
+  margin-top: 47px;
+  width: 100%;
+  height: 52px;
+  background: repeating-linear-gradient(to right bottom, #ccd9e2 0%, #ccd9e2 9%, #a9bcca 9%, #a9bcca 18%);
 }

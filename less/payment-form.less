@@ -1,0 +1,81 @@
+.payment-form {
+}
+
+.payment-form__container {
+  flex-shrink: 0;
+  //margin-left: auto;
+  width: 543px;
+  min-height: 720px;
+  //background: rgba(255, 0, 0, 0.1);
+}
+
+.payment-form__order-details {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.payment-form__item {
+  margin-right: 60px;
+  font-family: "Poppins", "Arial", Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #2b2b2b;
+  opacity: 0.6;
+}
+
+.payment-form__payment-type {}
+
+.payment-form__buttons-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  width: 100%;
+  //background: rgba(255, 255, 0, 0.2);
+}
+
+.payment-form__radio-button {
+  position: relative;
+  width: 200px;
+  height: 95px;
+  transition: 0.3s;
+  cursor: pointer;
+
+  &:not(:last-of-type) {
+    margin-right: 75px;
+  }
+
+  &:hover {
+    background: darken(#ffffff, 2%);
+  }
+}
+
+.payment-form__checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #e8e8e8;
+
+  &--visa {
+    background: url("../img/visaMaster--disabled.svg") no-repeat center;
+    background-size: 120px;
+  }
+  &--paypal {
+    background: url("../img/paypal--disabled.svg") no-repeat center;
+    background-size: 120px;
+  }
+}
+
+input[name="payment_type"]:checked ~ .payment-form__checkmark.payment-form__checkmark--visa {
+  background: #ffffff url("../img/visaMaster.svg") no-repeat center;
+  background-size: 120px;
+  border-color: #000000;
+}
+
+input[name="payment_type"]:checked ~ .payment-form__checkmark.payment-form__checkmark--paypal {
+  background: #ffffff url("../img/paypal.svg") no-repeat center;
+  background-size: 120px;
+  border-color: #000000;
+}

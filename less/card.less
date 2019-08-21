@@ -1,0 +1,65 @@
+.card__container {
+  position: relative;
+  width: 543px;
+  //height: 280px;
+  perspective: 800px;
+
+  &--disabled {
+    opacity: 0.1;
+    pointer-events: none;
+  }
+
+  &:hover .card__front-side {
+    transform: rotateY(180deg);
+  }
+
+  &:hover .card__back-side {
+    transform: rotateY(360deg);
+  }
+}
+
+.card__front-side,
+.card__back-side {
+  position: absolute;
+  padding: 20px 40px;
+  width: 100%;
+  height: 280px;
+  background: #ffffff;
+  border: 1px solid #000000;
+  transition: 0.8s;
+  transition-timing-function: linear;
+  backface-visibility: hidden;
+  transform-origin: 50% 100%;
+}
+
+.card__back-side {
+  transform: rotateY(180deg);
+}
+
+.card__split-inputs {
+  margin-top: 25px;
+  width: 170px;
+}
+
+.card__date-divider {
+  margin: 0 15px;
+  font-family: "Poppins", "Arial", Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 150px;
+  color: #222334;
+}
+
+.card__magnet-line {
+  margin: 27px 0 45px;
+  width: 100%;
+  height: 52px;
+  background: #242424;
+}
+
+.card__cvv-line {
+  margin-top: 47px;
+  width: 100%;
+  height: 52px;
+  background: repeating-linear-gradient(to right bottom, #ccd9e2 0%, #ccd9e2 9%, #a9bcca 9%, #a9bcca 18%);
+}
