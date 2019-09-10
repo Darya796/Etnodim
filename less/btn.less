@@ -88,6 +88,15 @@
   &:hover::after {
     width: 100%;
   }
+
+  &--left-arrow::before {
+    transform: translateY(-50%) rotate(180deg);
+  }
+
+  &--left-arrow::after {
+    left: auto;
+    right: 0;
+  }
 }
 
 .btn__line-crossed-text {

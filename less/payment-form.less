@@ -6,6 +6,7 @@
   //margin-left: auto;
   width: 543px;
   min-height: 720px;
+  transition: 0.3s;
   //background: rgba(255, 0, 0, 0.1);
 }
 
@@ -24,11 +25,16 @@
   opacity: 0.6;
 }
 
-.payment-form__payment-type {}
+.payment-form__payment-type {
+  margin-bottom: 45px;
+  padding-bottom: 45px;
+  border-bottom: 1px solid #d1d1d1;
+}
 
 .payment-form__buttons-container {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   margin-bottom: 30px;
   width: 100%;
   //background: rgba(255, 255, 0, 0.2);
@@ -36,17 +42,18 @@
 
 .payment-form__radio-button {
   position: relative;
-  width: 200px;
+  width: 46%;
+  //min-width: 200px;
   height: 95px;
   transition: 0.3s;
   cursor: pointer;
 
-  &:not(:last-of-type) {
-    margin-right: 75px;
-  }
+  //&:not(:last-of-type) {
+  //  margin-right: 75px;
+  //}
 
   &:hover {
-    background: darken(#ffffff, 2%);
+    background: darken(#ffffff, 3%);
   }
 }
 
@@ -78,4 +85,10 @@ input[name="payment_type"]:checked ~ .payment-form__checkmark.payment-form__chec
   background: #ffffff url("../img/paypal.svg") no-repeat center;
   background-size: 120px;
   border-color: #000000;
+}
+
+.payment-form__btn-hidden {
+  transition: 0.3s;
+  opacity: 0;
+  visibility: hidden;
 }

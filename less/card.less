@@ -1,20 +1,28 @@
+.card__static-container {
+  //width: 543px;
+  //height: 280px;
+}
+
 .card__container {
   position: relative;
   width: 543px;
-  //height: 280px;
+  height: 280px;
   perspective: 800px;
+  //z-index: 2;
 
   &--disabled {
     opacity: 0.1;
     pointer-events: none;
   }
 
-  &:hover .card__front-side {
-    transform: rotateY(180deg);
-  }
+  &--rotate {
+    & .card__front-side {
+      transform: rotateY(180deg);
+    }
 
-  &:hover .card__back-side {
-    transform: rotateY(360deg);
+    & .card__back-side {
+      transform: rotateY(360deg);
+    }
   }
 }
 
@@ -38,7 +46,7 @@
 
 .card__split-inputs {
   margin-top: 25px;
-  width: 170px;
+  width: 190px;
 }
 
 .card__date-divider {

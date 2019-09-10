@@ -638,6 +638,14 @@ a.logo__container:hover {
 .btn__text-out-border:hover::after {
   width: 100%;
 }
+.btn__text-out-border--left-arrow::before {
+  -webkit-transform: translateY(-50%) rotate(180deg);
+          transform: translateY(-50%) rotate(180deg);
+}
+.btn__text-out-border--left-arrow::after {
+  left: auto;
+  right: 0;
+}
 .btn__line-crossed-text {
   position: relative;
   margin-top: 45px;
@@ -1174,14 +1182,20 @@ a.logo__container:hover {
       -ms-flex-align: center;
           align-items: center;
 }
+.cart__popup-bottom-container--margin-bottom {
+  margin-bottom: 45px;
+}
 .cart__popup-total-title {
   font-family: "Poppins", "Arial", Helvetica, sans-serif;
   font-weight: 700;
   font-size: 18px;
   color: #252535;
 }
+.cart__popup-total-title--margin-right {
+  margin-right: auto;
+}
 .cart__popup-total-currency {
-  margin-left: 70px;
+  margin-left: 40px;
   max-width: 200px;
   font-family: "Poppins", "Arial", Helvetica, sans-serif;
   font-weight: 700;
@@ -1237,6 +1251,11 @@ a.logo__container:hover {
       -ms-flex-pack: start;
           justify-content: flex-start;
 }
+.split-grid--justify-end {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
 .input-container--half {
   width: 48%;
 }
@@ -1261,7 +1280,7 @@ a.logo__container:hover {
   font-weight: 400;
   font-size: 16px;
   line-height: 26px;
-  letter-spacing: 14px;
+  letter-spacing: 13px;
   color: #222334;
   border: 1px solid #000000;
 }
@@ -3160,12 +3179,26 @@ a.logo__container:hover {
 }
 .cart-page__list-container {
   width: 47%;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.cart-page__disabled-column {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  opacity: 0.2;
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .payment-form__container {
   -ms-flex-negative: 0;
       flex-shrink: 0;
   width: 543px;
   min-height: 720px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 .payment-form__order-details {
   display: -webkit-box;
@@ -3184,6 +3217,11 @@ a.logo__container:hover {
   color: #2b2b2b;
   opacity: 0.6;
 }
+.payment-form__payment-type {
+  margin-bottom: 45px;
+  padding-bottom: 45px;
+  border-bottom: 1px solid #d1d1d1;
+}
 .payment-form__buttons-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3191,22 +3229,22 @@ a.logo__container:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-bottom: 30px;
   width: 100%;
 }
 .payment-form__radio-button {
   position: relative;
-  width: 200px;
+  width: 46%;
   height: 95px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
   cursor: pointer;
 }
-.payment-form__radio-button:not(:last-of-type) {
-  margin-right: 75px;
-}
 .payment-form__radio-button:hover {
-  background: #fafafa;
+  background: #f7f7f7;
 }
 .payment-form__checkmark {
   position: absolute;
@@ -3234,9 +3272,16 @@ input[name="payment_type"]:checked ~ .payment-form__checkmark.payment-form__chec
   background-size: 120px;
   border-color: #000000;
 }
+.payment-form__btn-hidden {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  opacity: 0;
+  visibility: hidden;
+}
 .card__container {
   position: relative;
   width: 543px;
+  height: 280px;
   -webkit-perspective: 800px;
           perspective: 800px;
 }
@@ -3244,11 +3289,11 @@ input[name="payment_type"]:checked ~ .payment-form__checkmark.payment-form__chec
   opacity: 0.1;
   pointer-events: none;
 }
-.card__container:hover .card__front-side {
+.card__container--rotate .card__front-side {
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
 }
-.card__container:hover .card__back-side {
+.card__container--rotate .card__back-side {
   -webkit-transform: rotateY(360deg);
           transform: rotateY(360deg);
 }
@@ -3275,7 +3320,7 @@ input[name="payment_type"]:checked ~ .payment-form__checkmark.payment-form__chec
 }
 .card__split-inputs {
   margin-top: 25px;
-  width: 170px;
+  width: 190px;
 }
 .card__date-divider {
   margin: 0 15px;
