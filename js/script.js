@@ -129,12 +129,12 @@ $(function () {
     /*==================================================================================================================*/
 
     $(".banners").mousemove(function (e) {
-        $(".sale__img-tree").parallax(-27, e);
-        $(".sale__img-fr").parallax(37, e);
+        // $(".sale__img-tree").parallax(-27, e);
+        // $(".sale__img-fr").parallax(37, e);
 
 
-        $(".jewelry__inner-img-fr").parallax(37, e);
-        $(".jewelry__outer-img-fr").parallax(37, e);
+        // $(".jewelry__inner-img-fr").parallax(37, e);
+        // $(".jewelry__outer-img-fr").parallax(37, e);
     });
     /*==================================================================================================================*/
 

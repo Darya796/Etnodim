@@ -192,7 +192,7 @@
 }
 
 .cart__popup-table-header-row {
-  //margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .cart__table-title-cell {
@@ -238,7 +238,7 @@
 }
 
 .cart__popup-table-cell {
-  padding: 20px 20px;
+  padding: 20px;
 
   &:first-of-type {
     padding-left: 0;
@@ -246,32 +246,65 @@
   }
 
   &:nth-of-type(2) {
-    padding: 53px 20px;
+    padding: 0 20px;
     width: 130px;
+    vertical-align: middle;
   }
 
   &:nth-of-type(3) {
-    padding: 53px 20px;
+    padding: 59px 20px 0;
+    //padding: 77px 10px 0;
     width: 130px;
     text-align: center;
   }
 
   &:nth-of-type(4) {
-    padding: 53px 20px;
+    padding: 67px 20px 0;
+    //padding: 85px 10px 0;
     width: 30%;
     max-width: 130px;
     text-align: center;
   }
 
   &:last-of-type {
-    padding: 60px 20px;
-    padding-right: 0;
+    padding: 68px 0 0 20px;
+    //padding: 86px 0 0 10px;
     text-align: center;
   }
 }
 
 .cart__popup-table-photo {
+  //width: 100px;
   width: 130px;
+}
+
+.cart__popup-table--cart-page .cart__popup-table-cell {
+  padding: 20px 10px;
+
+  &:first-of-type {
+    padding-left: 0;
+  }
+
+  &:nth-of-type(2) {
+    padding: 0 10px;
+  }
+
+  &:nth-of-type(3) {
+    padding: 32px 10px 0;
+  }
+
+  &:nth-of-type(4) {
+    padding: 40px 10px 0;
+  }
+
+  &:last-of-type {
+    padding: 41px 10px 0;
+  }
+}
+
+.cart__popup-table--cart-page .cart__popup-table-photo {
+  width: 98px;
+  //width: 130px;
 }
 
 .cart__popup-product-name {
@@ -415,5 +448,44 @@
 
   .cart__popup-table-cell {
     padding: 37px 20px;
+  }
+
+  .cart__popup-table--cart-page .cart__popup-table-photo {
+    //width: 100px;
+    width: 130px;
+  }
+
+  .cart__popup-table--cart-page .cart__popup-table-cell {
+    &:nth-of-type(3) {
+      padding: 77px 10px 0;
+    }
+
+    &:nth-of-type(4) {
+      padding: 85px 10px 0;
+    }
+
+    &:last-of-type {
+      padding: 86px 10px 0;
+    }
+  }
+}
+
+@media (min-width: 1600px) {
+  .cart__popup-table-cell {
+    &:nth-of-type(2) {
+      padding: 0 20px;
+    }
+
+    &:nth-of-type(3) {
+      padding: 77px 20px 0;
+    }
+
+    &:nth-of-type(4) {
+      padding: 85px 20px 0;
+    }
+
+    &:last-of-type {
+      padding: 86px 20px 0;
+    }
   }
 }

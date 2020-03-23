@@ -11,7 +11,7 @@
             totalProducts += parseInt($(".quantity-input__input").val());
             return totalProducts
         });
-        $(".cart__popup-products-numder").html(totalProducts);
+        $(".cart__popup-products-number").html(totalProducts);
         if (totalProducts > 0) {
             $(".cart__count").html(totalProducts);
         } else {
